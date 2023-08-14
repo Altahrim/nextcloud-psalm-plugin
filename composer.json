@@ -1,0 +1,22 @@
+{
+    "name": "altahrim/nextcloud-psalm-plugin",
+    "description": "Stubs for Nextcloud applications",
+    "licence": "AGPL-3.0-only",
+    "type": "psalm-plugin",
+    "require": {
+        "vimeo/psalm": "^v5.14.0"
+    },
+    "require-dev": {
+        "php-stubs/generator": "^0.8.3"
+    },
+    "extra": {
+        "psalm": {
+            "pluginClass": "Altahrim\\NextcloudPsalmPlugin\\PluginEntry"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Altahrim\\NextcloudPsalmPlugin\\": ""
+        }
+    }
+}

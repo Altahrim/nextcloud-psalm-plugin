@@ -1,0 +1,79 @@
+<?php
+
+namespace OC;
+
+/**
+ * Class ServerContainer
+ *
+ * @package OC
+ */
+class ServerContainer extends \OC\AppFramework\Utility\SimpleContainer
+{
+    /** @var DIContainer[] */
+    protected $appContainers;
+    /** @var string[] */
+    protected $hasNoAppContainer;
+    /** @var string[] */
+    protected $namespaces;
+    /**
+     * ServerContainer constructor.
+     */
+    public function __construct()
+    {
+    }
+    /**
+     * @param string $appName
+     * @param string $appNamespace
+     */
+    public function registerNamespace(string $appName, string $appNamespace) : void
+    {
+    }
+    /**
+     * @param string $appName
+     * @param DIContainer $container
+     */
+    public function registerAppContainer(string $appName, \OC\AppFramework\DependencyInjection\DIContainer $container) : void
+    {
+    }
+    /**
+     * @param string $appName
+     * @return DIContainer
+     * @throws QueryException
+     */
+    public function getRegisteredAppContainer(string $appName) : \OC\AppFramework\DependencyInjection\DIContainer
+    {
+    }
+    /**
+     * @param string $namespace
+     * @param string $sensitiveNamespace
+     * @return DIContainer
+     * @throws QueryException
+     */
+    protected function getAppContainer(string $namespace, string $sensitiveNamespace) : \OC\AppFramework\DependencyInjection\DIContainer
+    {
+    }
+    public function has($id, bool $noRecursion = false) : bool
+    {
+    }
+    /**
+     * @template T
+     * @param class-string<T>|string $name
+     * @return T|mixed
+     * @psalm-template S as class-string<T>|string
+     * @psalm-param S $name
+     * @psalm-return (S is class-string<T> ? T : mixed)
+     * @throws QueryException
+     * @deprecated 20.0.0 use \Psr\Container\ContainerInterface::get
+     */
+    public function query(string $name, bool $autoload = true)
+    {
+    }
+    /**
+     * @internal
+     * @param string $id
+     * @return DIContainer|null
+     */
+    public function getAppContainerForService(string $id) : ?\OC\AppFramework\DependencyInjection\DIContainer
+    {
+    }
+}
